@@ -3,6 +3,10 @@ from time import sleep as wait
 import random
 from ..log import log
 import pyperclip
+import pytesseract
+import re
+from PIL import ImageOps, ImageEnhance
+from ..ai.groq import imageToText
 
 """
 Website: https://github.com/novadevvvv
@@ -55,9 +59,30 @@ def sendChat(message: str) -> None:
     if not chatOpen:
         openChat()
 
-    click((1388, 822))
+    def sendPacket(packet: str):
+        click((1388, 822))
+        pyperclip.copy(packet)
+        pyautogui.hotkey("ctrl", "v")
+        click((1782, 823))
 
-    pyperclip.copy(message)
-    pyautogui.hotkey("ctrl", "v")
+    # Split into chunks of 40 characters
+    messages = [message[i:i+40] for i in range(0, len(message), 40)]
 
-    click((1782, 823))
+    for packet in messages:
+        sendPacket(packet)
+
+
+def getChat() -> list:
+
+    global chatOpen
+
+    if not chatOpen:
+        openChat()
+    
+    wait(0.5)
+
+    screenshot = pyautogui.screenshot("chat.png",region=(1295, 370, 286, 421))
+
+    response = imageToText(screenshot)
+
+    return response
