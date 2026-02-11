@@ -11,6 +11,10 @@ Path: "src/ai/"
 apiEnv = "heartopiaChatAPI"
 apiKey = os.getenv(apiEnv)
 
+if apiKey is None:
+    log("Invalid API Key")
+    exit()
+
 log(f"Got API Key Starting Woith {apiKey[:2]}")
 
 if not apiKey:

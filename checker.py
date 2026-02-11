@@ -1,3 +1,10 @@
 from src.ai.groq import getResponse
+import os
 
-print(getResponse("Please briefly explain the importance of fast AI inference.", "You are an assistant"))
+apiEnv = "heartopiaChatAPI"
+
+apiKey = os.getenv(apiEnv)
+
+print(apiKey[:2])
+
+# print(getResponse("Please briefly explain the importance of fast AI inference.", "You are an assistant"))
