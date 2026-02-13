@@ -1,0 +1,56 @@
+{
+  "profiles": {
+    "1548x870": {
+      "resolution": {
+        "width": 1548,
+        "height": 870
+      },
+      "panel": {
+        "x": 1034,
+        "y": 189,
+        "width": 471,
+        "height": 508
+      },
+      "message_list": {
+        "x": 1043,
+        "y": 289,
+        "width": 456,
+        "height": 339
+      },
+      "lanes": {
+        "left_x": 1212,
+        "right_x": 1395
+      },
+      "classifier": {
+        "split_x": 1248
+      },
+      "source_image": "C:\\Users\\Ricardo\\Documents\\GitHub\\Heartopia-AIChatbot\\tests\\fixtures\\screenshots\\image (2) (1).png"
+    },
+    "1546x870": {
+      "resolution": {
+        "width": 1546,
+        "height": 870
+      },
+      "panel": {
+        "x": 1033,
+        "y": 182,
+        "width": 484,
+        "height": 519
+      },
+      "message_list": {
+        "x": 1042,
+        "y": 280,
+        "width": 460,
+        "height": 363
+      },
+      "lanes": {
+        "left_x": 1193,
+        "right_x": 1388
+      },
+      "classifier": {
+        "split_x": 1243
+      },
+      "source_image": "C:\\Users\\Ricardo\\Documents\\GitHub\\Heartopia-AIChatbot\\tests\\fixtures\\screenshots\\image (3).png"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "cases": [
+    {
+      "name": "alternating-1",
+      "image": "alternating-1.png",
+      "expected": {
+        "chat_region_detected": true,
+        "messages": [
+          {
+            "side": "left",
+            "message_contains": "hey"
+          },
+          {
+            "side": "right",
+            "message_contains": "hi"
+          }
+        ]
+      }
+    }
+  ]
+}

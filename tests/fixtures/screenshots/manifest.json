@@ -1,0 +1,78 @@
+{
+  "cases": [
+    {
+      "name": "image-1",
+      "image": "image (1) (1).png",
+      "expected": {
+        "chat_region_detected": true,
+        "exact_message_count": 4,
+        "messages": [
+          {
+            "side": "right",
+            "message_contains": "MEOW"
+          },
+          {
+            "side": "right",
+            "message_contains": "the cheese grater tomato"
+          },
+          {
+            "side": "right",
+            "message_contains": "asfasf"
+          },
+          {
+            "side": "right",
+            "message_contains": "the horse"
+          }
+        ]
+      }
+    },
+    {
+      "name": "image-2",
+      "image": "image (2) (1).png",
+      "expected": {
+        "chat_region_detected": true,
+        "exact_message_count": 3,
+        "messages": [
+          {
+            "side": "left",
+            "message_contains": "LOL DID U TRY CONNECTING AN LLM"
+          },
+          {
+            "side": "left",
+            "message_contains": "What data is it getting to move?"
+          },
+          {
+            "side": "left",
+            "message_contains": "At what frequency?"
+          }
+        ]
+      }
+    },
+    {
+      "name": "image-3",
+      "image": "image (3).png",
+      "expected": {
+        "chat_region_detected": true,
+        "exact_message_count": 4,
+        "messages": [
+          {
+            "side": "left",
+            "message_contains": "FIND A SEAHORSE EMOJI"
+          },
+          {
+            "side": "right",
+            "message_contains": "mm sugar floud cake"
+          },
+          {
+            "side": "right",
+            "message_contains": "omg"
+          },
+          {
+            "side": "right",
+            "message_contains": "MEOW"
+          }
+        ]
+      }
+    }
+  ]
+}
